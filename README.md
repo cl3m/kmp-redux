@@ -14,7 +14,7 @@ Basic redux setup for kotlin multiplatform with JetPack Compose and SwiftUI. App
 
 ## Redux Usage
 
-Store usage on Jetpack Compose:
+[CounterStore](https://github.com/cl3m/kmp-redux/blob/develop/shared/src/commonMain/kotlin/kmp/redux/features/counter/CounterRedux.kt) usage on Jetpack Compose
 
 ```kotlin
 @Composable
@@ -44,7 +44,7 @@ fun CounterView() {
 }
 ```
 
-Store usage on SwiftUI:
+[CounterStore](https://github.com/cl3m/kmp-redux/blob/develop/shared/src/commonMain/kotlin/kmp/redux/features/counter/CounterRedux.kt) usage on SwiftUI
 
 ```swift
 struct CounterView: View {
