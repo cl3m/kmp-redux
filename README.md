@@ -68,5 +68,5 @@ struct CounterView: View {
 
 ## Inspirations
 
-SpaceStore inspired from [KMP Mobile Template](https://github.com/xorum-io/kmp_mobile_template)
-SwiftUI AppStore inspired from [swiftui-recipes-app](https://github.com/mecid/swiftui-recipes-app)
+- SpaceStore inspired from [KMP Mobile Template](https://github.com/xorum-io/kmp_mobile_template)
+- SwiftUI AppStore inspired from [swiftui-recipes-app](https://github.com/mecid/swiftui-recipes-app)
