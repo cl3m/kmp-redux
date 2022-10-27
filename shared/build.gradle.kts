@@ -33,6 +33,7 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
+                implementation("io.github.aakira:napier:2.6.1")
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}")
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.serialization}")
                 implementation("io.ktor:ktor-client-core:${Versions.ktor}")

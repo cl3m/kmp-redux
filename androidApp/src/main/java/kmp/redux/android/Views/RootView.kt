@@ -1,5 +1,6 @@
 package kmp.redux.android.Views
 
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.navigation.compose.NavHost
@@ -10,7 +11,12 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AutoAwesome
 import androidx.compose.material.icons.filled.Tag
 import androidx.compose.material.Icon
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
+import kmp.redux.android.CounterStore
+import kmp.redux.android.SpaceStore
+import kmp.redux.ui.CounterView
+import kmp.redux.ui.SpaceView
 
 enum class Tab {
     Space, Counter
@@ -51,13 +57,13 @@ fun RootView(){
                 }
             }
         }
-    ) {
-        NavHost(navController, startDestination = Tab.Space.name) {
+    ) { padding ->
+        NavHost(navController, modifier = Modifier.padding(padding), startDestination = Tab.Space.name) {
             composable(Tab.Space.name) {
-                SpaceView()
+                SpaceView(SpaceStore.current)
             }
             composable(Tab.Counter.name) {
-                CounterView()
+                CounterView(CounterStore.current)
             }
         }
     }

@@ -1,6 +1,5 @@
-package kmp.redux.android.Views
+package kmp.redux.redux.ui
 
-import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -10,18 +9,20 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import kmp.redux.android.CounterStore
+import io.github.aakira.napier.Napier
 import kmp.redux.features.counter.CounterAction
+import kmp.redux.features.counter.CounterState
+import kmp.redux.redux.DerivedStore
 
-@Preview(showBackground = true)
+lateinit var CounterStore: ProvidableCompositionLocal<DerivedStore<CounterState, CounterAction>>
+
 @Composable
-fun CounterView() {
+internal fun CounterView() {
     val state by CounterStore.current.state.collectAsState()
     val dispatch = CounterStore.current.dispatch
 
-    Log.d(null, "CounterView render")
+    Napier.d( "CounterView render")
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,

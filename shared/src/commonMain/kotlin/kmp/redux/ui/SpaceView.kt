@@ -1,6 +1,5 @@
-package kmp.redux.android.Views
+package kmp.redux.redux.ui
 
-import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -9,19 +8,20 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import kmp.redux.android.SpaceStore
+import io.github.aakira.napier.Napier
 import kmp.redux.features.space.redux.SpaceAction
 import kmp.redux.features.space.redux.SpaceState
+import kmp.redux.redux.DerivedStore
 
-@Preview(showBackground = true)
+lateinit var SpaceStore: ProvidableCompositionLocal<DerivedStore<SpaceState, SpaceAction>>
+
 @Composable
-fun SpaceView() {
+internal fun SpaceView() {
     val state by SpaceStore.current.state.collectAsState()
     val dispatch = SpaceStore.current.dispatch
 
-    Log.d(null, "SpaceView render")
+    Napier.d( "SpaceView render")
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
