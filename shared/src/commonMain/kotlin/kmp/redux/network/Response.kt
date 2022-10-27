@@ -1,6 +1,6 @@
 package kmp.redux.network
 
-import io.ktor.client.features.*
+import io.ktor.client.plugins.*
 import io.ktor.client.statement.*
 import io.ktor.utils.io.charsets.*
 import kotlinx.serialization.Serializable
@@ -17,7 +17,7 @@ internal suspend inline fun <T> request(block: () -> T) = try {
     Response.Success(block())
 } catch (clientRequestException: ClientRequestException) {
     println(clientRequestException)
-    val error = getError(clientRequestException.response.readText(Charsets.UTF_8)).error
+    val error = getError(clientRequestException.response.bodyAsText()).error
     Response.Failure(error)
 } catch (t: Throwable) {
     println(t)

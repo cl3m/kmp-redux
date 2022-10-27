@@ -8,7 +8,7 @@ plugins {
     id("kotlinx-serialization")
     id("com.rickclephas.kmp.nativecoroutines") version "${Versions.nativecoroutines}"
     id("dev.icerock.moko.kswift")
-    id("org.jetbrains.compose") version "0.0.0-mpp-fix-ci-issues-dev552"
+    id("org.jetbrains.compose") version "1.2.0"
 }
 
 version = "1.0"
@@ -36,13 +36,14 @@ kotlin {
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}")
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.serialization}")
                 implementation("io.ktor:ktor-client-core:${Versions.ktor}")
-                implementation("io.ktor:ktor-client-serialization:${Versions.ktor}")
+                implementation("io.ktor:ktor-client-content-negotiation:${Versions.ktor}")
                 implementation("io.ktor:ktor-client-logging:${Versions.ktor}")
+                implementation("io.ktor:ktor-serialization-kotlinx-json:${Versions.ktor}")
                 implementation(compose.ui)
                 implementation(compose.foundation)
                 implementation(compose.material)
                 implementation(compose.runtime)
-                implementation("org.jetbrains.skiko:skiko:0.6.7")
+                implementation("org.jetbrains.skiko:skiko:0.7.36")
             }
         }
         val commonTest by getting {
@@ -89,11 +90,11 @@ kswift {
 }
 
 android {
-    compileSdk = 31
+    compileSdk = 33
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     defaultConfig {
         minSdk = 21
-        targetSdk = 31
+        targetSdk = 33
     }
 }
 
