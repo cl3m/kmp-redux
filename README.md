@@ -1,8 +1,12 @@
 [![Kotlin Multiplatform](https://img.shields.io/static/v1?logo=Kotlin&&logoColor=3c94cf&label=&message=Kotlin%20Multiplatform&color=555)](https://kotlinlang.org/docs/reference/multiplatform.html)
 
-# KMP Redux
+# KMP Redux (Compose Test)
 
 Basic redux setup for kotlin multiplatform with JetPack Compose and SwiftUI. AppStore can be derived into sub store.
+
+![Screenshot](https://github.com/cl3m/kmp-redux/raw/skiko/screenshots/composeredux.png)
+
+
 
 ## Libraries
 
