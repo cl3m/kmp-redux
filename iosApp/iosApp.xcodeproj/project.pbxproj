@@ -15,8 +15,10 @@
 		7543918227C53D2800D067D9 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7543918027C53D2800D067D9 /* CounterView.swift */; };
 		7543918527C53D4B00D067D9 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7543918427C53D4B00D067D9 /* AppStore.swift */; };
 		7543918727C53D5000D067D9 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7543918627C53D5000D067D9 /* RootView.swift */; };
+		75C51A25290B272000D5CEF6 /* ComposeSpaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C51A24290B272000D5CEF6 /* ComposeSpaceView.swift */; };
+		75C51A27290B28AC00D5CEF6 /* AvoidDispose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C51A26290B28AC00D5CEF6 /* AvoidDispose.swift */; };
+		75C51A29290B2CFE00D5CEF6 /* ComposeCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C51A28290B2CFE00D5CEF6 /* ComposeCounterView.swift */; };
 		75FAD80A27C90E35002140EC /* shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FAD80927C90E34002140EC /* shared.swift */; };
-		758A007127C77AF700CC2173 /* ComposeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758A007027C77AF700CC2173 /* ComposeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +32,10 @@
 		7543918627C53D5000D067D9 /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75C51A24290B272000D5CEF6 /* ComposeSpaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeSpaceView.swift; sourceTree = "<group>"; };
+		75C51A26290B28AC00D5CEF6 /* AvoidDispose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvoidDispose.swift; sourceTree = "<group>"; };
+		75C51A28290B2CFE00D5CEF6 /* ComposeCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeCounterView.swift; sourceTree = "<group>"; };
 		75FAD80927C90E34002140EC /* shared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = shared.swift; sourceTree = "<group>"; };
-		758A007027C77AF700CC2173 /* ComposeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeView.swift; sourceTree = "<group>"; };
 		CF0A5D02B3CDC59B06E5DB5F /* Pods-iosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.release.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.release.xcconfig"; sourceTree = "<group>"; };
 		EC65A9E111E97974DFC13374 /* Pods_iosApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -70,8 +74,9 @@
 			children = (
 				7543918027C53D2800D067D9 /* CounterView.swift */,
 				7543917F27C53D2800D067D9 /* SpaceView.swift */,
+				75C51A24290B272000D5CEF6 /* ComposeSpaceView.swift */,
+				75C51A28290B2CFE00D5CEF6 /* ComposeCounterView.swift */,
 				7543918627C53D5000D067D9 /* RootView.swift */,
-				758A007027C77AF700CC2173 /* ComposeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -99,10 +104,11 @@
 			children = (
 				75FAD80827C90E14002140EC /* Generated */,
 				7543917E27C53D1800D067D9 /* Views */,
-				058557BA273AAA24004C7B11 /* Assets.xcassets */,
+				75C51A26290B28AC00D5CEF6 /* AvoidDispose.swift */,
 				7543918427C53D4B00D067D9 /* AppStore.swift */,
-				7555FF8C242A565B00829871 /* Info.plist */,
 				2152FB032600AC8F00CF470E /* iOSApp.swift */,
+				058557BA273AAA24004C7B11 /* Assets.xcassets */,
+				7555FF8C242A565B00829871 /* Info.plist */,
 				058557D7273AAEEB004C7B11 /* Preview Content */,
 			);
 			path = iosApp;
@@ -260,11 +266,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
+				75C51A27290B28AC00D5CEF6 /* AvoidDispose.swift in Sources */,
+				75C51A29290B2CFE00D5CEF6 /* ComposeCounterView.swift in Sources */,
 				7543918527C53D4B00D067D9 /* AppStore.swift in Sources */,
 				7543918727C53D5000D067D9 /* RootView.swift in Sources */,
-				758A007127C77AF700CC2173 /* ComposeView.swift in Sources */,
 				7543918127C53D2800D067D9 /* SpaceView.swift in Sources */,
 				75FAD80A27C90E35002140EC /* shared.swift in Sources */,
+				75C51A25290B272000D5CEF6 /* ComposeSpaceView.swift in Sources */,
 				7543918227C53D2800D067D9 /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

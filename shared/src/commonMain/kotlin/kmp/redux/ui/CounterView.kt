@@ -15,7 +15,7 @@ import kmp.redux.features.counter.CounterAction
 import kmp.redux.features.counter.CounterState
 import kmp.redux.redux.DerivedStore
 
-lateinit var CounterStore: ProvidableCompositionLocal<DerivedStore<CounterState, CounterAction>>
+internal lateinit var CounterStore: ProvidableCompositionLocal<DerivedStore<CounterState, CounterAction>>
 
 @Composable
 internal fun CounterView() {

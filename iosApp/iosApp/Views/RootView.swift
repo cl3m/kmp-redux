@@ -22,10 +22,15 @@ struct RootView: View {
                     Text("Counter")
                 }
             
-            ComposeView()
+            ComposeSpaceView()
+                .tabItem {
+                    Image(systemName: "sparkles")
+                    Text("Compose Space")
+                }
+            ComposeCounterView()
                 .tabItem {
                     Image(systemName: "number")
-                    Text("Compose")
+                    Text("Compose Counter")
                 }
         }
     }

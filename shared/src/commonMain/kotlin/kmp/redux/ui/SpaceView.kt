@@ -14,7 +14,7 @@ import kmp.redux.features.space.redux.SpaceAction
 import kmp.redux.features.space.redux.SpaceState
 import kmp.redux.redux.DerivedStore
 
-lateinit var SpaceStore: ProvidableCompositionLocal<DerivedStore<SpaceState, SpaceAction>>
+internal lateinit var SpaceStore: ProvidableCompositionLocal<DerivedStore<SpaceState, SpaceAction>>
 
 @Composable
 internal fun SpaceView() {
