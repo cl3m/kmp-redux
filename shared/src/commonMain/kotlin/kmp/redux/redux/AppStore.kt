@@ -6,15 +6,18 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
 class AppStore {
+    companion object {
+        val shared = AppStore()
+    }
     private val stateFlow = MutableStateFlow(AppState())
     lateinit var dispatch: (AppAction) -> Unit
 
     init {
         dispatch = {
             stateFlow.value = appReducer(stateFlow.value, it) {
-                this.dispatch(it)
-            }
+            this.dispatch(it)
         }
+    }
     }
 
     val state: StateFlow<AppState>

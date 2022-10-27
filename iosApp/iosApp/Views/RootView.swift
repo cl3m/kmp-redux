@@ -21,6 +21,12 @@ struct RootView: View {
                     Image(systemName: "number")
                     Text("Counter")
                 }
+            
+            ComposeView()
+                .tabItem {
+                    Image(systemName: "number")
+                    Text("Compose")
+                }
         }
     }
 }

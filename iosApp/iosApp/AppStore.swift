@@ -12,7 +12,7 @@ import KMPNativeCoroutinesCombine
 
 class AppStore: ObservableObject {
     @Published private(set) var state: AppState
-    private let store = shared.AppStore()
+    private let store = shared.AppStore.Companion().shared
     private var cancellable: AnyCancellable?
     
     

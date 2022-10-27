@@ -16,6 +16,7 @@
 		7543918527C53D4B00D067D9 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7543918427C53D4B00D067D9 /* AppStore.swift */; };
 		7543918727C53D5000D067D9 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7543918627C53D5000D067D9 /* RootView.swift */; };
 		75FAD80A27C90E35002140EC /* shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FAD80927C90E34002140EC /* shared.swift */; };
+		758A007127C77AF700CC2173 /* ComposeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758A007027C77AF700CC2173 /* ComposeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		7555FF7B242A565900829871 /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75FAD80927C90E34002140EC /* shared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = shared.swift; sourceTree = "<group>"; };
+		758A007027C77AF700CC2173 /* ComposeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeView.swift; sourceTree = "<group>"; };
 		CF0A5D02B3CDC59B06E5DB5F /* Pods-iosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.release.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.release.xcconfig"; sourceTree = "<group>"; };
 		EC65A9E111E97974DFC13374 /* Pods_iosApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -69,6 +71,7 @@
 				7543918027C53D2800D067D9 /* CounterView.swift */,
 				7543917F27C53D2800D067D9 /* SpaceView.swift */,
 				7543918627C53D5000D067D9 /* RootView.swift */,
+				758A007027C77AF700CC2173 /* ComposeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				7543918527C53D4B00D067D9 /* AppStore.swift in Sources */,
 				7543918727C53D5000D067D9 /* RootView.swift in Sources */,
+				758A007127C77AF700CC2173 /* ComposeView.swift in Sources */,
 				7543918127C53D2800D067D9 /* SpaceView.swift in Sources */,
 				75FAD80A27C90E35002140EC /* shared.swift in Sources */,
 				7543918227C53D2800D067D9 /* CounterView.swift in Sources */,
@@ -272,6 +276,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				"ARCHS[sdk=iphonesimulator*]" = x86_64;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -397,7 +402,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = orgIdentifier.iosApp;
+				PRODUCT_BUNDLE_IDENTIFIER = orgIdentifier.iosApp.compose;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -417,7 +422,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = orgIdentifier.iosApp;
+				PRODUCT_BUNDLE_IDENTIFIER = orgIdentifier.iosApp.compose;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
