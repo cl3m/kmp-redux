@@ -34,23 +34,23 @@ public enum TestKs {
  * selector: ClassContext/KMP_Redux:shared/kmp/redux/redux/AppAction */
 public enum AppActionKs {
 
-  case space(AppAction.Space)
   case counter(AppAction.Counter)
+  case space(AppAction.Space)
 
   var sealed: AppAction {
     switch self {
-    case .space(let obj):
-      return obj
     case .counter(let obj):
+      return obj
+    case .space(let obj):
       return obj
     }
   }
 
   public init(_ obj: AppAction) {
-    if let obj = obj as? shared.AppAction.Space {
-      self = .space(obj)
-    } else if let obj = obj as? shared.AppAction.Counter {
+    if let obj = obj as? shared.AppAction.Counter {
       self = .counter(obj)
+    } else if let obj = obj as? shared.AppAction.Space {
+      self = .space(obj)
     } else {
       fatalError("AppActionKs not syncronized with AppAction class")
     }
@@ -108,23 +108,23 @@ public extension shared.SpaceState.Status {
  * selector: ClassContext/KMP_Redux:shared/kmp/redux/features/counter/CounterAction */
 public enum CounterActionKs {
 
-  case increment
   case decrement
+  case increment
 
   var sealed: CounterAction {
     switch self {
-    case .increment:
-      return shared.CounterAction.Increment()
     case .decrement:
       return shared.CounterAction.Decrement()
+    case .increment:
+      return shared.CounterAction.Increment()
     }
   }
 
   public init(_ obj: CounterAction) {
-    if obj is shared.CounterAction.Increment {
-      self = .increment
-    } else if obj is shared.CounterAction.Decrement {
+    if obj is shared.CounterAction.Decrement {
       self = .decrement
+    } else if obj is shared.CounterAction.Increment {
+      self = .increment
     } else {
       fatalError("CounterActionKs not syncronized with CounterAction class")
     }

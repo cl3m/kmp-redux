@@ -43,7 +43,6 @@ kotlin {
                 implementation(compose.foundation)
                 implementation(compose.material)
                 implementation(compose.runtime)
-                implementation("org.jetbrains.skiko:skiko:0.7.36")
             }
         }
         val commonTest by getting {

@@ -1,8 +1,8 @@
 source 'https://cdn.cocoapods.org'
+platform :ios, '15.0'
 
 target 'iosApp' do
   use_frameworks!
-  platform :ios, '15.0'
   pod 'shared', :path => '../shared'
   pod 'KMPNativeCoroutinesCombine'  # Combine implementation
 end
