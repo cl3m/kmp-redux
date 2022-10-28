@@ -28,6 +28,8 @@ class AvoidDispose: UIViewController {
         addChild(controller)
         view.addSubview(controller.view)
         controller.view.frame = view.bounds
+        //kotlin compose refresh
+        //controller.view.touchesCancelled([UITouch()], with: UIEvent())
     }
     
     override func viewDidDisappear(_ animated: Bool) {

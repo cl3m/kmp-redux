@@ -13,7 +13,11 @@ struct iOSApp: App {
                 .environmentObject(store)
                 .environmentObject(spaceStore)
                 .environmentObject(counterStore)
-		}
+                .onAppear {
+                    // warm up kotlin
+                    ViewControllersKt.getSpaceViewController().loadView()
+                }
+        }
 	}
     
     init() {
